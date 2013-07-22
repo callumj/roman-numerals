@@ -1,5 +1,5 @@
 module RomanNumerals
-  @base_digits = {
+  BASE_DIGITS = {
     1    => 'I',
     4    => 'IV',
     5    => 'V',
@@ -17,10 +17,10 @@ module RomanNumerals
 
   def self.to_roman(value)
     result = ''
-    @base_digits.keys.reverse.each do |decimal|
+    BASE_DIGITS.keys.reverse.each do |decimal|
       while value >= decimal
         value -= decimal
-        result += @base_digits[decimal]
+        result += BASE_DIGITS[decimal]
       end
     end
     result
@@ -28,13 +28,20 @@ module RomanNumerals
 
   def self.to_decimal(value)
     value.upcase!
+    return nil unless valid_numeral_set? value
     result = 0
-    @base_digits.values.reverse.each do |roman|
+    BASE_DIGITS.values.reverse.each do |roman|
       while value.start_with? roman
         value = value.slice(roman.length, value.length)
-        result += @base_digits.key roman
+        result += BASE_DIGITS.key roman
       end
     end
     result
+  end
+
+  def self.valid_numeral_set?(str)
+    str.chars.to_a.all? do |char|
+      BASE_DIGITS.values.any? { |v| char == v }
+    end
   end
 end
