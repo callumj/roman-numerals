@@ -1,3 +1,10 @@
+Copright (c) 2013 Callum Jones
+
+Do whatever you want as long as you respect the original license
+
+
+Original LICENSE:
+
 Copyright (c) 2011 Andrew Vos
 
 Permission is hereby granted, free of charge, to any person obtaining

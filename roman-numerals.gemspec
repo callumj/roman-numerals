@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{roman-numerals}
-  s.version = "0.3.0"
+  s.version = "0.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Andrew Vos"]
-  s.date = %q{2011-05-02}
+  s.authors = ["Andrew Vos", "Callum Jones"]
+  s.date = %q{2013-06-23}
   s.description = %q{Roman numeral converter}
-  s.email = %q{andrew.vos@gmail.com}
+  s.email = %q{callum@callumj.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
     "spec/helper.rb",
     "spec/roman-numerals_spec.rb"
   ]
-  s.homepage = %q{http://github.com/AndrewVos/roman-numerals}
+  s.homepage = %q{http://github.com/callumj/roman-numerals}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
